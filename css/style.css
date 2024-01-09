@@ -1,0 +1,239 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  /* colors */
+  --clr-orange: hsl(25, 97%, 53%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-grey: hsl(217, 12%, 63%);
+  --clr-medium-grey: hsl(216, 12%, 54%);
+  --clr-dark-blue: hsl(213, 19%, 18%);
+  --clr-very-dark-blue: hsl(216, 12%, 8%);
+  
+  /* font-sizes */
+  --fs-700: 1.5rem;
+  --fs-400: 0.875rem;
+  
+  /* font-families */
+  --ff-sans-normal: 'Overpass', sans-serif;
+
+}
+
+
+@media (min-width: 45em) {
+  :root {
+      /* font-sizes */
+      --fs-700: 3.5rem;
+      --fs-400: 1.125rem;
+  }
+}
+
+/* ------------------- */
+/* body                */
+/* ------------------- */
+body {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  color: var(--clr-white);
+  background-color: var(--clr-very-dark-blue);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.d-block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.flow--space-small {
+  --flow-space: .75rem;
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+/* colors */
+.bg-very-dark-blue {background-color: var(--clr-very-dark-blue);}
+.bg-dark-blue {background-color: var(--clr-dark-blue);}
+.bg-medium-grey {background-color: var(--clr-medium-grey);}
+.bg-light-grey {background-color: var(--clr-light-grey);}
+.bg-white {background-color: var(--clr-white);}
+.bg-orange {background-color: var(--clr-orange);}
+
+.text-very-dark-blue {color: var(--clr-very-dark-blue);}
+.text-dark-blue {color: var(--clr-dark-blue);}
+.text-medium-grey {color: var(--clr-medium-grey);}
+.text-light-grey {color: var(--clr-light-grey);}
+.text-white {color: var(--clr-white);}
+.text-orange {color: var(--clr-orange);}
+
+/* typography */
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+.uppercase { text-transform: uppercase; }
+
+.fs-700 { font-size: var(--fs-700); }
+.fs-400 { font-size: var(--fs-400); }
+
+.fs-700,
+.fs-400 {
+  line-height: 1.6;
+}
+
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+.card {
+  width: 20.4rem;
+  background-color: var(--clr-dark-blue);
+  border-radius: 1rem;
+  margin: 10rem auto;
+  padding: 1.5rem;
+  color: var(--clr-light-grey);
+}
+
+.card__title {
+  color: var(--clr-white);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card__description {
+  margin-bottom: 1.5rem;
+}
+
+.circle {
+  background-color: var(--clr-medium-grey);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.star {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.card__ratings {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__rating {
+  width: 2.625rem;
+  height: 2.625rem;
+}
+
+.card__rating--checked {
+  color: var(--clr-white);
+  background-color: var(--clr-light-grey);
+}
+
+.card__rating:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-orange);
+}
+
+.end {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pill {
+  background-color: var(--clr-medium-grey);
+  width: fit-content;
+  margin: 1rem auto;
+  margin-top: 2rem;
+  color: var(--clr-orange);
+  padding: 0rem 1.2rem 0.5rem 1.2rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-center;
+}
+
+.pill__text {
+  display: inline-block;
+}
+
+.card__btn {
+  width: 100%;
+  color: var(--clr-white);
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--clr-orange);
+  padding: 0.7rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.card__btn:hover {
+  color: var(--clr-orange);
+  background-color: var(--clr-white);
+}
+
+@media (min-width: 45em) {
+  .card {
+    width: 25.75rem;
+    margin: 12rem auto;
+    padding: 2rem;
+  }
+
+  .card__title {
+    margin-top: 2rem;
+  }
+
+  .card__ratings {
+    margin-bottom: 2rem;
+  }
+
+  .star {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .card__rating {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+/* ----------------------------- */
+/* Layout                        */
+/* ----------------------------- */
