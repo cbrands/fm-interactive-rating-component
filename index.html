@@ -15,35 +15,34 @@
   </style>
 </head>
 <body>
+  <main class="card">
+    <section class="rating">
+      <h2>How did we do?</h2>
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+      <form action="#">
+        <fieldset class="ratings">
+          <input id="r1" class="rating" type="radio" name="radio" value="1" />
+          <input id="r2" class="rating" type="radio" name="radio" value="2" />
+          <input id="r3" class="rating" type="radio" name="radio" value="3" />
+          <input id="r4" class="rating" type="radio" name="radio" value="4" />
+          <input id="r5" class="rating" type="radio" name="radio" value="5" />
+        </fieldset>
+        <input class="btn" type="submit" value="Submit">
+      </form>
+    </section>
+    <section class="end hidden">
+      <p class="result">You selected <!-- Add rating here --> out of 5</p>
+      <h2>Thank you!</h2>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+    </section>
 
-  <!-- Rating state start -->
+  </main>
 
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/cbrands/fm-interactive-rating-component">Charles</a>.
+  </footer>
 </body>
 </html>
