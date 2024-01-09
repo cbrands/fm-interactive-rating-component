@@ -1,4 +1,8 @@
 const available_ratings = document.querySelectorAll(".card__rating")
+const button = document.querySelector(".card__btn")
+cardRate = document.getElementById("card__rate");
+const startScreen = document.querySelector("#start_screen");
+const endScreen = document.querySelector("#end_screen");
 let selectedRate
 
 available_ratings.forEach((rating) => {
@@ -12,4 +16,12 @@ available_ratings.forEach((rating) => {
      selectedRate = e.target.innerText
      console.log(selectedRate)
   }) 
+})
+
+button.addEventListener("click", ()=> {
+  if (selectedRate) {
+    cardRate.innerText = selectedRate
+    startScreen.classList.add("hidden")
+    endScreen.classList.remove("hidden")
+  }
 })
